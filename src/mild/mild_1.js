@@ -72,10 +72,10 @@ export function countArray(array) {
 var keys = {};
 for (var i = 0; i < array.length; i++){
 var temp = array[i];
-if (count[temp] == null){
-    count[temp] = 1;
+if (keys[temp] == null){
+    keys[temp] = 1;
 } else {
-  count[temp]++;
+  keys[temp]++;
 }
 }
 return keys;
