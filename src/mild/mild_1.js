@@ -69,5 +69,14 @@ return '{ max: ' + max + ', min: ' + min + ' } ';
  *
  */
 export function countArray(array) {
-
+var keys = {};
+for (var i = 0; i < array.length; i++){
+var temp = array[i];
+if (count[temp] == null){
+    count[temp] = 1;
+} else {
+  count[temp]++;
+}
+}
+return keys;
 }
