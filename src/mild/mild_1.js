@@ -10,7 +10,7 @@
  */
 export function sumToString(a, b) {
    var sum = a + b;
-   return sum;
+   return '3 + 4 = ' + sum;
 }
 
 
@@ -25,7 +25,14 @@ export function sumToString(a, b) {
  *
  */
 export function getIncreasingArray(startNumber, endNumber) {
-
+ var array = [];
+ var counter = 0;
+ for (var i = startNumber; i < endNumber; i++){
+     
+     array[counter] = i;
+     counter++;
+ }
+ return array;
 }
 
 /**
