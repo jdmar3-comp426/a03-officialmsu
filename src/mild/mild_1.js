@@ -46,8 +46,10 @@ export function maxAndMin(numbers) {
 var max
 var min;
 for (var i = 0; i < numbers.length; i++){
-    max = numbers[i];
-    min = numbers[i];
+    if (i = 0){
+        max = numbers[i];
+        min = numbers[i];
+    }
     if (numbers[i] > max){
         max = numbers[i];
     }
