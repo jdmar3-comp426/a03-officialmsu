@@ -55,7 +55,7 @@ for (var i = 0; i < numbers.length; i++){
     }
     
 }
-return 'max: ' + max + ', min: ' + min;
+return '{ max: ' + max + ', min: ' + min + ' } ';
 }
 
 /**
