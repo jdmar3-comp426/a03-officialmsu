@@ -31,9 +31,19 @@ function avgMpg(){
     highwaympg = highwaympg / mpg_data.length;
     return {city: citympg, highway: highwaympg};
 }
+function allYearStats(){
+    var mpgData = new Array();
+    for (var i = 0; i < mpg_data.length; i++){
+        mpgData[i] = mpg_data[i][`year`];
+    }
+    getStatistics(mpgData);
+}
+function ratioHybrids(){
+
+}
 export const allCarStats = {
     avgMpg: avgMpg(),
-    allYearStats: undefined,
+    allYearStats: allYearStats,
     ratioHybrids: undefined,
 };
 
