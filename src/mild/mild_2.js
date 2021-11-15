@@ -40,31 +40,26 @@ if (variable == null){
 
  */
 export function identifyArray(array) {
+   var newarray = [];
   for (var i =0; i < array.length; i++){
    if (array[i] == null){
-      return "{ type: 'undefined', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'undefined', value: " + array[i] + " }";
    } else if (typeof(array[i]) == undefined){
-      return "{ type: 'undefined', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'undefined', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "object"){
-      return "{ type: 'object', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'object', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "boolean"){
-      return "{ type: 'boolean', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'boolean', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "number"){
-      return "{ type: 'number', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'number', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "string"){
-      return "{ type: 'string', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'string', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "symbol"){
-      return "{ type: 'symbol', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'symbol', value: " + array[i] + " }";
    } else if (typeof(array[i]) == "bigint"){
-      return "{ type: 'bigint', value: " + array[i] + " }";
+      newarray[i] =  "{ type: 'bigint', value: " + array[i] + " }";
    }
-   if(i+1 != null){
-      if (i+1 == array.length){
-
-      } else {
-         return ",";
-      }
-   }
+ 
   }
 }
 
