@@ -21,7 +21,7 @@ if (variable == null){
 } else if (typeof(variable) == "symbol"){
    return "{ type: 'symbol', value: " + variable + " }";
 } else if (typeof(variable) == "bigint"){
-   return "{ type: 'bigint', value: " + variable + " }";
+   return "{ type: 'bigint', value: '" + variable + "' }";
 }
 }
 
