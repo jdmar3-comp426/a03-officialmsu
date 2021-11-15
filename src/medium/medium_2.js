@@ -43,7 +43,7 @@ function ratioHybrids(){
 }
 export const allCarStats = {
     avgMpg: avgMpg(),
-    allYearStats: allYearStats,
+    allYearStats: allYearStats(),
     ratioHybrids: undefined,
 };
 
