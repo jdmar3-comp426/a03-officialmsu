@@ -71,6 +71,20 @@ export function getMedian(array) {
  }
  */
 export function getStatistics(array) {
+    var stats = {};
+    var length = array.length;
+    var sum = getSum(array);
+    var median = getMedian(array);
+    var mean;
+    for (var i = 0; i < array.length; i++){
+        mean = sum / length;
+    }
+    var min = array[0];
+    var max = array[length];
+    var variance = variance(array, mean);
+    var standard_deviation = Math.sqrt((variance^2) / length);
 
+    return {'length: ': length, ' sum: ': sum, ' mean: ': mean, ' median: ': median, 
+    ' min: ': min, ' max: ': max, ' variance: ': variance, ' standard_deviation: ': standard_deviation};
 }
 
