@@ -36,7 +36,7 @@ function allYearStats(){
     for (var i = 0; i < mpg_data.length; i++){
         mpgData[i] = mpg_data[i][`year`];
     }
-    getStatistics(mpgData);
+    return getStatistics(mpgData);
 }
 function ratioHybrids(){
 
