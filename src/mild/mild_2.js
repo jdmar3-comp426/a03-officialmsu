@@ -58,6 +58,13 @@ export function identifyArray(array) {
    } else if (typeof(array[i]) == "bigint"){
       return "{ type: 'bigint', value: " + array[i] + " }";
    }
+   if(i+1 != null){
+      if (i+1 == array.length){
+
+      } else {
+         return ",";
+      }
+   }
   }
 }
 
