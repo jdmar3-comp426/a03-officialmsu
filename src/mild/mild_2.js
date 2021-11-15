@@ -106,7 +106,7 @@ export function removeKeyNonDestructive(object, key) {
    var newobject = object;
 
 
-   var newnewobject = newobject + object;
+   var newnewobject = newobject + removeKey(object,key);
    return newnewobject;
 
 }
