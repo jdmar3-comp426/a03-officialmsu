@@ -10,17 +10,17 @@ if (variable == null){
    return "{ type: 'undefined', value: " + variable + " }";
 } else if (typeof(variable) == undefined){
    return "{ type: 'undefined', value: " + variable + " }";
-} else if (typeof(variable) == object){
+} else if (typeof(variable) == "object"){
    return "{ type: 'object', value: " + variable + " }";
-} else if (typeof(variable) == boolean){
+} else if (typeof(variable) == "boolean"){
    return "{ type: 'boolean', value: " + variable + " }";
-} else if (typeof(variable) == number){
+} else if (typeof(variable) == "number"){
    return "{ type: 'number', value: " + variable + " }";
-} else if (typeof(variable) == string){
+} else if (typeof(variable) == "string"){
    return "{ type: 'string', value: " + variable + " }";
-} else if (typeof(variable) == symbol){
+} else if (typeof(variable) == "symbol"){
    return "{ type: 'symbol', value: " + variable + " }";
-} else if (typeof(variable) == bigint){
+} else if (typeof(variable) == "bigint"){
    return "{ type: 'bigint', value: " + variable + " }";
 }
 }
