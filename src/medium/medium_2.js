@@ -39,12 +39,22 @@ function allYearStats(){
     return getStatistics(mpgData);
 }
 function ratioHybrids(){
+    var counter = 0;
+    var ratio = 0;
+    for (var i = 0; i < mpg_data.length; i++){
+        if (mpg_data[i][`hybrid`]){
+            counter++;
+        } else {
 
+        }
+    }
+    ratio = counter/mpg_data.length;
+    return ratio;
 }
 export const allCarStats = {
     avgMpg: avgMpg(),
     allYearStats: allYearStats(),
-    ratioHybrids: undefined,
+    ratioHybrids: ratioHybrids(),
 };
 
 
