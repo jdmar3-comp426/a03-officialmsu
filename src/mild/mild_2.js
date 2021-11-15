@@ -107,7 +107,7 @@ export function removeKeyNonDestructive(object, key) {
 
    delete object[key];
 
-   return newobject;
+   return newobject + " " + object;
 
 }
 
