@@ -92,7 +92,7 @@ export function getStatistics(array) {
         }
         
     }
-  
+    newarr = newarr.sort((a,b)=> a - b);
     var min = newarr[0];
     var max = newarr[length-1];
     var variancee = variance(array, mean);
