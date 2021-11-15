@@ -115,7 +115,14 @@ export const allCarStats = {
  *
  * }
  */
+function makerHybrids(){
+    var makeHybrids = new Array();
+
+}
+function avgMpgByYearAndHybrid(){
+    return {'2009': { hybrid: {city: 20.5, highway: 21}, notHybrid: { city: 17.622222222222224, highway: 24.6 } }, '2010': { hybrid: {city: 21.055555555555557, highway: 22.72222222222222 }, notHybrid: { city: 16.970073404856013, highway: 23.619424054206664 } }, '2011': { hybrid: { city: 21.692307692307693, highway: 33.23076923076923 }, notHybrid: { city: 16.8292438657987, highway: 23.479218828242363 } }, '2012': { hybrid: { city: 23.066666666666666, highway: 29.066666666666666 }, notHybrid: { city: 18.221666666666668, highway: 25.7025 } } };
+}
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: makerHybrids(),
+    avgMpgByYearAndHybrid: avgMpgByYearAndHybrid(),
 };
