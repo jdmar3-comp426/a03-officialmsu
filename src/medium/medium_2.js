@@ -33,7 +33,7 @@ function avgMpg(){
 }
 export const allCarStats = {
     avgMpg: avgMpg(),
-    allYearStats: getStatistics(mpg_data),
+    allYearStats: undefined,
     ratioHybrids: undefined,
 };
 
