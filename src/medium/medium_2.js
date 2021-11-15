@@ -32,7 +32,7 @@ function avgMpg(){
     return {city: citympg, highway: highwaympg};
 }
 export const allCarStats = {
-    avgMpg: avgMpg,
+    avgMpg: avgMpg(),
     allYearStats: getStatistics(mpg_data),
     ratioHybrids: undefined,
 };
