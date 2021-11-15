@@ -72,6 +72,8 @@ export function getMedian(array) {
  */
 export function getStatistics(array) {
     var stats = {};
+    var newarr = array;
+    var newarray = new Array();
     var length = array.length;
     var sum = getSum(array);
     var median = getMedian(array);
@@ -79,12 +81,24 @@ export function getStatistics(array) {
     for (var i = 0; i < array.length; i++){
         mean = sum / length;
     }
-    var min = array[0];
-    var max = array[length];
+    for (var i = 0; i < newarr.length; i++){
+        
+        if (newarr[i+1] != null){
+            if (newarr[i] > newarr[i+1]){
+                newarray[i] = newarr[i];
+                newarr[i] = newarr[i+1];
+                newarr[i+1] = newarray[i];
+            }
+        }
+        
+    }
+  
+    var min = newarr[0];
+    var max = newarr[length-1];
     var variancee = variance(array, mean);
     var standard_deviation = Math.sqrt((variance^2) / length);
 
-    return {'length: ': length, ' sum: ': sum, ' mean: ': mean, ' median: ': median, 
-    ' min: ': min, ' max: ': max, ' variance: ': variancee, ' standard_deviation: ': standard_deviation};
+    return {length: length, sum: sum, mean: mean, median: median, 
+    min: min, max: max, variance: variancee, standard_deviation: standard_deviation};
 }
 
