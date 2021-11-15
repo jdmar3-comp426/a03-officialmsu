@@ -26,7 +26,29 @@ export function getSum(array) {
  * console.log(getMedian(array)); // 4.5
  */
 export function getMedian(array) {
-
+    var newarray = new Array();
+    var counter = 0;
+    for (var i = 0; i < array.length; i++){
+        
+        if (array[i+1] != null){
+            if (array[i] > array[i+1]){
+                newarray[i] = array[i];
+                array[i] = array[i+1];
+                array[i+1] = newarray[i];
+            }
+        }
+        
+    }
+    if (array.length % 2 == 0){
+        var left = array[array.length/2];
+        var right = array[array.length/2];
+        var median = (left + right) /2;
+        return median;
+    } else {
+        var median = Math.floor(array.length/2);
+        return median;
+    }
+    
 }
 
 /**
