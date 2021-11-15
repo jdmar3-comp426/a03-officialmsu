@@ -96,7 +96,7 @@ export function getStatistics(array) {
     var min = newarr[0];
     var max = newarr[length-1];
     var variancee = variance(array, mean);
-    var standard_deviation = Math.sqrt((variance^2) / length);
+    var standard_deviation = Math.sqrt(variancee);
 
     return {length: length, sum: sum, mean: mean, median: median, 
     min: min, max: max, variance: variancee, standard_deviation: standard_deviation};
