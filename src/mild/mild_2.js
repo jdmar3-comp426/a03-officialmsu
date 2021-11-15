@@ -61,7 +61,7 @@ export function identifyArray(array) {
    }
    
   }
-  return newarray;
+  return array;
 }
 
 /**
