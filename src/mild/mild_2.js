@@ -59,8 +59,9 @@ export function identifyArray(array) {
    } else if (typeof(array[i]) == "bigint"){
       newarray[i] =  "{ type: 'bigint', value: " + array[i] + " }";
    }
- 
+   
   }
+  return newarray;
 }
 
 /**
