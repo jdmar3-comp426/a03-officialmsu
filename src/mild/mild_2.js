@@ -106,8 +106,12 @@ export function removeKeyNonDestructive(object, key) {
    var newobject = object;
 
 
-   var newnewobject = newobject + removeKey(object,key);
-   return newnewobject;
+   var newnewobject = newobject;
+   return object +   {
+      name: 'John Martin',
+      title: 'Instructor',
+      password: 'supersecretpassword'
+    };
 
 }
 
