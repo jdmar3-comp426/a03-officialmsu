@@ -82,7 +82,7 @@ export function identifyArray(array) {
  */
 export function removeKey(object, key) {
    if (key == 'password'){
-      delete object.key;
+      return object.key;
    }
    return object;
 }
