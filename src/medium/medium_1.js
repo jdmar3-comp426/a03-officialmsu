@@ -81,10 +81,10 @@ export function getStatistics(array) {
     }
     var min = array[0];
     var max = array[length];
-    var variance = variance(array, mean);
+    var variancee = variance(array, mean);
     var standard_deviation = Math.sqrt((variance^2) / length);
 
     return {'length: ': length, ' sum: ': sum, ' mean: ': mean, ' median: ': median, 
-    ' min: ': min, ' max: ': max, ' variance: ': variance, ' standard_deviation: ': standard_deviation};
+    ' min: ': min, ' max: ': max, ' variance: ': variancee, ' standard_deviation: ': standard_deviation};
 }
 
