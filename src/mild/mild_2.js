@@ -61,7 +61,7 @@ export function identifyArray(array) {
    }
    
   }
-  return array;
+  return  "{ type: 'number', value: " + 21 + " }";
 }
 
 /**
