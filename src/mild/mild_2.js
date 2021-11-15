@@ -81,7 +81,7 @@ export function identifyArray(array) {
  obj now does not contain the `password` field
  */
 export function removeKey(object, key) {
-   if (key == 'password'){
+   if (key.equals('password')){
       return object.key;
    }
    return object;
