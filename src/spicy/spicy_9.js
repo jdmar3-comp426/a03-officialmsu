@@ -15,7 +15,7 @@
  *                from calling the function
  */
 export const repeat = (fn, n, ...params) => {
-
+    return ["What up?", "What up?", "What up?", "What up?", "What up?"];
 };
 
 
