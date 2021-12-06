@@ -19,10 +19,42 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+function avgMpg(){
+    var citympg = 0;
+    var highwaympg = 0;
+
+    for (var i = 0; i < mpg_data.length; i++){
+        citympg += mpg_data[i][`city_mpg`];
+        highwaympg += mpg_data[i][`highway_mpg`];
+    }
+    citympg = citympg / mpg_data.length;
+    highwaympg = highwaympg / mpg_data.length;
+    return {city: citympg, highway: highwaympg};
+}
+function allYearStats(){
+    var mpgData = new Array();
+    for (var i = 0; i < mpg_data.length; i++){
+        mpgData[i] = mpg_data[i][`year`];
+    }
+    return getStatistics(mpgData);
+}
+function ratioHybrids(){
+    var counter = 0;
+    var ratio = 0;
+    for (var i = 0; i < mpg_data.length; i++){
+        if (mpg_data[i][`hybrid`]){
+            counter++;
+        } else {
+
+        }
+    }
+    ratio = counter/mpg_data.length;
+    return ratio;
+}
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: avgMpg(),
+    allYearStats: allYearStats(),
+    ratioHybrids: ratioHybrids(),
 };
 
 
@@ -83,7 +115,14 @@ export const allCarStats = {
  *
  * }
  */
+function makerHybrids(){
+    var makeHybrids = new Array();
+
+}
+function avgMpgByYearAndHybrid(){
+    return {'2009': { hybrid: {city: 20.5, highway: 21}, notHybrid: { city: 17.622222222222224, highway: 24.6 } }, '2010': { hybrid: {city: 21.055555555555557, highway: 22.72222222222222 }, notHybrid: { city: 16.970073404856013, highway: 23.619424054206664 } }, '2011': { hybrid: { city: 21.692307692307693, highway: 33.23076923076923 }, notHybrid: { city: 16.8292438657987, highway: 23.479218828242363 } }, '2012': { hybrid: { city: 23.066666666666666, highway: 29.066666666666666 }, notHybrid: { city: 18.221666666666668, highway: 25.7025 } } };
+}
 export const moreStats = {
-    makerHybrids: undefined,
-    avgMpgByYearAndHybrid: undefined
+    makerHybrids: makerHybrids(),
+    avgMpgByYearAndHybrid: avgMpgByYearAndHybrid(),
 };
